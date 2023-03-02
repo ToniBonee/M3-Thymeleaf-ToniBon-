@@ -20,7 +20,7 @@ public class StudentController {
     public StudentController(StudentService studentService){
         this.studentService = studentService;
     }
-    @GetMapping("/")
+    @GetMapping("/students")
     public String listStudents(Model model) {
         model.addAttribute("students", studentService.getAllStudents());
         return "students";
